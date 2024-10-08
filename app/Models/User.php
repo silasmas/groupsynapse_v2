@@ -3,10 +3,16 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\role;
+use App\Models\achat;
+use App\Models\panier;
+use App\Models\favorie;
+use App\Models\addresse;
+use App\Models\meilleure;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -17,12 +23,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
+    
+    protected $guarded = [];
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -42,4 +44,28 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function favorie()
+    {
+        return $this->belongsToMany(favorie::class);
+    }
+    public function acheter()
+    {
+        return $this->belongsToMany(achat::class);
+    }
+    public function note()
+    {
+        return $this->belongsToMany(meilleure::class);
+    }
+    public function panier()
+    {
+        return $this->belongsToMany(panier::class);
+    }
+    public function role()
+    {
+        return $this->belongsToMany(role::class);
+    }
+    public function adresse()
+    {
+        return $this->hasMany(addresse::class);
+    }
 }
