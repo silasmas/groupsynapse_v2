@@ -33,6 +33,7 @@ use App\Filament\Resources\BrancheResource\RelationManagers;
 use App\Filament\Resources\BrancheResource\Pages\EditBranche;
 use App\Filament\Resources\BrancheResource\Pages\ListBranches;
 use App\Filament\Resources\BrancheResource\Pages\CreateBranche;
+use App\Filament\Resources\BrancheResource\RelationManagers\CategorieRelationManager;
 
 class BrancheResource extends Resource
 {
@@ -120,7 +121,7 @@ class BrancheResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            CategorieRelationManager::class
         ];
     }
 
@@ -129,7 +130,7 @@ class BrancheResource extends Resource
         return [
             'index' => Pages\ListBranches::route('/'),
             // 'create' => Pages\CreateBranche::route('/create'),
-            // 'edit' => Pages\EditBranche::route('/{record}/edit'),
+            'edit' => Pages\EditBranche::route('/{record}/edit'),
         ];
     }
 }

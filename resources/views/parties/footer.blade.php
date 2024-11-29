@@ -61,11 +61,10 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget mb-50">
                         <div class="footer-logo mb-30">
-                            <a href="index.html"><img src="img/logo/logo_black.png" alt=""></a>
+                            <a href="index.html"><img width="100" src="{{ asset('assets/img/logo/logosynapse.png') }}" alt=""></a>
                         </div>
                         <div class="footer-text mb-35">
-                            <p>Namkand sodales vel online best prices Amazon Check out ethnic wear, formal wear western wear
-                            Blood Pressure Rate Monito.</p>
+                            <p>Nous visons à transformer les potentiels de la RDC et de l'Afrique en richesse stable et durable au travers nos différents secteurs d’activités. </p>
                         </div>
                         <div class="footer-social">
                             <ul>
@@ -81,7 +80,7 @@
                 <div class="col-xl-2 col-lg-3 col-sm-6">
                     <div class="footer-widget mb-50">
                         <div class="fw-title mb-35">
-                            <h5>Customer Service</h5>
+                            <h5>Service client</h5>
                         </div>
                         <div class="fw-link">
                             <ul>
@@ -97,7 +96,7 @@
                 <div class="col-xl-2 col-lg-3 col-sm-6">
                     <div class="footer-widget mb-50">
                         <div class="fw-title mb-35">
-                            <h5>Quick Links</h5>
+                            <h5>Liens rapides</h5>
                         </div>
                         <div class="fw-link">
                             <ul>
@@ -134,12 +133,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="copyright-text">
-                        <p>Copyright © 2020 <a href="#">Venam</a> All Rights Reserved.</p>
+                        <p>Copyright © 2024 <a href="#">Groupsynapse</a> Tous droits réservés. Designed by <a href="silasmas.com" target="blank">SDEV</a></p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 d-none d-md-block">
                     <div class="text-right payment-method-img">
-                        <img src="img/images/card_img.png" alt="img">
+                        <img src="{{ asset('assets/img/images/p-ways.png') }}" width="200" alt="img">
                     </div>
                 </div>
             </div>

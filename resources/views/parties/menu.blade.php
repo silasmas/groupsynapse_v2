@@ -21,7 +21,7 @@
                                             <div class="dropdown">
                                                 <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
-                                                    <img src="img/icon/ship_flag.png" alt=""> US/USD
+                                                    <img src="assets/img/icon/ship_flag.png" alt=""> US/USD
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                     <a class="dropdown-item" href="#"><img src="{{ asset('assets/img/icon/australia.png') }} " alt="">AUS/USD</a>
@@ -88,43 +88,16 @@
                             <div class="menu-wrap">
                                 <nav class="menu-nav show">
                                     <div class="logo">
-                                        <a href="index.html"><img src="{{ asset('assets/img/logo/logo_black.png') }}" alt="Logo"></a>
+                                        <a href="index.html"><img src="{{ asset('assets/img/logo/logosynapse.png') }}" width="100" alt="Logo"></a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-lg-flex">
                                         <ul class="navigation">
-                                            <li class="active dropdown"><a href="#">Home</a>
-                                                <ul class="submenu">
-                                                    <li><a href="index.html">Home One</a></li>
-                                                    <li class="active"><a href="index-2.html">Home Two</a></li>
-                                                    <li><a href="index-3.html">Home Three</a></li>
-                                                </ul>
-                                            </li>
+                                            <li class="active dropdown"><a href="#">Home</a></li>
                                             <li><a href="about.html">About Us</a></li>
                                             <li class="dropdown"><a href="#">PAGES</a>
-                                                <ul class="submenu">
-                                                    <li><a href="my-account.html">My Account</a></li>
-                                                    <li><a href="404.html">404 Page</a></li>
-                                                    <li><a href="terms-conditios.html">Terms and Conditions</a></li>
-                                                </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">BLOG</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Standard Blog</a></li>
-                                                    <li><a href="blog-classic.html">Classic Blog</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">SHOP</a>
-                                                <ul class="submenu">
-                                                    <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                                    <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="wishlist.html">Wishlist page</a></li>
-                                                    <li><a href="cart.html">Cart page</a></li>
-                                                    <li><a href="checkout.html">Checkout page</a></li>
-                                                    <li><a href="order-completed.html">Order completed</a></li>
-                                                </ul>
-                                            </li>
+                                            <li class="dropdown"><a href="#">BLOG</a></li>
+                                            <li class="dropdown"><a href="#">SHOP</a></li>
                                             <li><a href="special.html">SPECIAL</a></li>
                                             <li><a href="contact.html">contacts</a></li>
                                         </ul>
@@ -139,7 +112,7 @@
                                                     <li class="d-flex align-items-start">
                                                         <div class="cart-img">
                                                             <a href="#">
-                                                                <img src="img/product/cart_p01.jpg" alt="">
+                                                                <img src="{{ asset('assets/img/product/cart_p01.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="cart-content">
@@ -162,7 +135,7 @@
                                                     <li class="d-flex align-items-start">
                                                         <div class="cart-img">
                                                             <a href="#">
-                                                                <img src="img/product/cart_p02.jpg" alt="">
+                                                                <img src="{{ asset('assets/img/product/cart_p02.jpg') }}" alt="">
                                                             </a>
                                                         </div>
                                                         <div class="cart-content">
@@ -206,7 +179,7 @@
                                 <div class="close-btn"><i class="fas fa-times"></i></div>
 
                                 <nav class="menu-box">
-                                    <div class="nav-logo"><a href="index.html"><img src="img/logo/white_logo.png" alt="" title=""></a>
+                                    <div class="nav-logo"><a href="index.html"><img src="{{ asset('assets/img/logo/white_logo.png') }}" alt="" title=""></a>
                                     </div>
                                     <div class="menu-outer">
                                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -237,7 +210,7 @@
                             <div class="header-category d-none d-lg-block">
                                 <a href="#" class="cat-toggle"><i class="flaticon-menu"></i>ALL DEPARTMENT</a>
                                 <ul class="category-menu">
-                                    <li class="has-dropdown"><a href="#"><div class="cat-menu-img"><img src="img/product/category_menu_img01.png" alt=""></div> Western woman</a>
+                                    <li class="has-dropdown"><a href="#"><div class="cat-menu-img"><img src="{{ asset('assets/img/product/category_menu_img01.png') }}" alt=""></div> Western woman</a>
                                         <ul class="mega-menu">
                                             <li>
                                                 <ul>
@@ -283,13 +256,13 @@
                                                 </ul>
                                                 <ul>
                                                     <li class="dropdown-title">Audio & Video</li>
-                                                    <li class="mega-menu-banner"><a href="#"><img src="img/images/megamenu_banner.jpg" alt=""></a>
+                                                    <li class="mega-menu-banner"><a href="#"><img src="{{ asset('assets/img/images/megamenu_banner.jpg') }}" alt=""></a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="has-dropdown"><a href="#"><div class="cat-menu-img"><img src="img/product/category_menu_img02.png" alt=""></div> TV, Appliances</a>
+                                    <li class="has-dropdown"><a href="#"><div class="cat-menu-img"><img src="{{ asset('assets/img/product/category_menu_img02.png') }}" alt=""></div> TV, Appliances</a>
                                         <ul class="mega-menu">
                                             <li>
                                                 <ul>
@@ -335,23 +308,23 @@
                                                 </ul>
                                                 <ul>
                                                     <li class="dropdown-title">Audio & Video</li>
-                                                    <li class="mega-menu-banner"><a href="#"><img src="img/images/megamenu_banner.jpg" alt=""></a>
+                                                    <li class="mega-menu-banner"><a href="#"><img src="{{ asset('assets/img/images/megamenu_banner.jpg') }}" alt=""></a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="img/product/category_menu_img03.png" alt=""></div> Baby Product</a></li>
-                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="img/product/category_menu_img04.png" alt=""></div> Grocery Product</a></li>
-                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="img/product/category_menu_img05.png" alt=""></div> Beauty, Health Product</a></li>
-                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="img/product/category_menu_img06.png" alt=""></div> Industrial Product</a></li>
-                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="img/product/category_menu_img07.png" alt=""></div> Car, Motorbike</a></li>
-                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="img/product/category_menu_img08.png" alt=""></div> Club Sports</a></li>
+                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img03.png" alt=""></div> Baby Product</a></li>
+                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img04.png" alt=""></div> Grocery Product</a></li>
+                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img05.png" alt=""></div> Beauty, Health Product</a></li>
+                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img06.png" alt=""></div> Industrial Product</a></li>
+                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img07.png" alt=""></div> Car, Motorbike</a></li>
+                                    <li><a href="shop-left-sidebar.html"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img08.png" alt=""></div> Club Sports</a></li>
                                     <li>
                                         <ul class="more_slide_open">
-                                            <li><a href="#"><div class="cat-menu-img"><img src="img/product/category_menu_img01.png" alt=""></div> Western woman</a></li>
-                                            <li><a href="#"><div class="cat-menu-img"><img src="img/product/category_menu_img02.png" alt=""></div> Health Product</a></li>
-                                            <li><a href="#"><div class="cat-menu-img"><img src="img/product/category_menu_img03.png" alt=""></div> Industrial Product</a></li>
+                                            <li><a href="#"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img01.png" alt=""></div> Western woman</a></li>
+                                            <li><a href="#"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img02.png" alt=""></div> Health Product</a></li>
+                                            <li><a href="#"><div class="cat-menu-img"><img src="assets/img/product/category_menu_img03.png" alt=""></div> Industrial Product</a></li>
                                         </ul>
                                     </li>
                                     <li class="more_categories">More Categories<i class="fas fa-angle-down"></i></li>

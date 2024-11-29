@@ -24,6 +24,7 @@ use Filament\Tables\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\Wizard\Step;
 use Filament\Resources\Pages\CreateRecord;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Tables\Actions\DeleteBulkAction;
@@ -69,7 +70,7 @@ class UserResource extends Resource
                         ]),
                     Step::make('Étape 2')
                         ->schema([
-                            Section::make('Information générale')->schema([
+                            Section::make('Role et profil')->schema([
                                 FileUpload::make('profil')
                                     ->label('Proto profil')
                                     ->directory('profil')
@@ -79,23 +80,27 @@ class UserResource extends Resource
                                     ->circleCropper()
                                     ->downloadable()
                                     ->image()
-                                    ->maxSize(1024)
-                                    ->columnSpan(6)
+                                    ->maxSize(3024)
+                                    ->columnSpan(4)
                                     ->previewable(true),
 
-                                Select::make('role_id')
+                                Select::make('roles')
                                     ->label('Roles')
-                                    ->columnSpan(6)
-                                    ->searchable()
+                                    ->columnSpan(4)
                                     ->preload()
                                     ->multiple() // Permet de sélectionner plusieurs rôles
+                                    ->searchable()
                                     ->required()
-                                    ->relationship('role', 'nom'), // 'roles' est la méthode du modèle User, 'name' est l'attribut à afficher
+                                    ->relationship('role', 'name'), // 'roles' est la méthode du modèle User, 'name' est l'attribut à afficher
+                                CheckboxList::make('roles')
+                                    ->columnSpan(4)
+                                    ->relationship('roles', 'name')
+                                    ->searchable()
                             ])->columns(12)
                         ]),
                     Step::make('Étape 3')
                         ->schema([
-                            Section::make('Information générale')
+                            Section::make('Identification')
                                 ->schema([
                                     TextInput::make('email')->label("Email")
                                         ->email()->maxLength(255)->unique(ignoreRecord: true)
@@ -117,7 +122,7 @@ class UserResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('profil')
-                ->circular()
+                    ->circular()
                     ->defaultImageUrl(url('assets/img/default.jpg'))
                     ->searchable(),
                 TextColumn::make('name')
@@ -131,6 +136,10 @@ class UserResource extends Resource
                 TextColumn::make('pays')
                     ->searchable(),
                 TextColumn::make('email')
+                    ->searchable(),
+                TextColumn::make('role.name')
+                    ->label('Rôle')
+                    ->badge()->color('success')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

@@ -147,12 +147,15 @@ class ProduitResource extends Resource
                     ->searchable(),
                 IconColumn::make('is_featured')
                     ->label('Favoris')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->boolean(),
                 IconColumn::make('in_stock')
                     ->label('Disponible')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->boolean(),
                 IconColumn::make('on_sale')
                     ->label('En vente')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->boolean(),
                 IconColumn::make('is_active')
                     ->label('Activé')
@@ -190,7 +193,14 @@ class ProduitResource extends Resource
         ];
     }
 
-    public static function getPages(): array
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+    public static function getNavigationBadgeColor(): string|array|null
+    {
+        return static::getModel()::count() > 10 ? "danger" : "success";
+    }    public static function getPages(): array
     {
         return [
             'index' => Pages\ListProduits::route('/'),
